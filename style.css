@@ -28,6 +28,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 2rem;
     position: fixed;
     width: 100%;
     top: 0;
@@ -38,8 +39,32 @@ header {
 }
 
 header .logo {
+    flex-grow: 1;
     font-size: 40px;
     font-weight: bold;
+}
+
+header .humberger-menu {
+    display: none;
+    i{
+        transform: scale(1.5);
+    }
+}
+
+header .nav-container {
+    align-items: center;
+    flex-grow: 1;
+}
+
+header nav {
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+header input{
+    display: none;
 }
 
 header ul {
@@ -53,7 +78,22 @@ header a {
     text-decoration: none;
     color: var(--tab-clolor);
     font-weight: 500;
+    position: relative;
+    
+    &::after {
+        border-radius: 10px;
+        content: "";
+        width: 0;
+        height: 2px;
+        background-color: var(--primary-header);
+        bottom: 0;
+        position: absolute;
+        left: 0;
+    }
 
+    &:hover::after {
+        width: 100%;
+    }
 }
 
 main {
@@ -588,11 +628,30 @@ footer {
 
 footer .footer-info {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    flex-wrap: wrap;
     width: 100%;
 }
 
-footer .footer-info div {
+footer .footer-info>div:first-child {
+    h4{
+        font-size: 44px;
+        font-weight: 400;
+    }
+    p{
+        font-size: 14px;
+        color: var(--secondary-text);
+        width: 250px;
+    }
+}
+
+footer .footer-info .footer-links {
+    display: flex;
+    gap: 3rem;
+    flex-wrap: wrap;
+    justify-content: center;
     h4{
         font-size: 21px;
         font-weight: bold;
@@ -615,7 +674,7 @@ footer .footer-info div {
     }
 }
 
-footer .footer-info div:last-child {
+footer .footer-info>div:last-child {
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -651,17 +710,7 @@ footer .footer-info .social {
     }
 }
 
-footer .footer-info div:first-child {
-    h4{
-        font-size: 44px;
-        font-weight: 400;
-    }
-    p{
-        font-size: 14px;
-        color: var(--secondary-text);
-        width: 250px;
-    }
-}
+
 
 footer > p {
     color: var(--secondary-text);
@@ -890,5 +939,69 @@ footer > p {
 @media (max-width: 1200px){
     section, header, footer {
         padding: 7px 20px;
+    }
+}
+
+@media (max-width: 1000px){
+    header .humberger-menu, header nav #close {
+        display: block;
+    }
+
+    header .nav-container {
+        position: fixed;
+        height: calc(100vh - 75px);
+        bottom: 0;
+        left: 0;
+        width: 100vw;
+        display: flex;
+        justify-content: flex-end;
+        pointer-events: none;
+        transition: backdrop-filter .2s ease-in-out;
+        
+        nav {
+            height: 100%;
+            transition: unset;
+            width: 300px;
+            background-color: var(--bg-color);
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            flex-grow: 0;
+            z-index: 9999;
+            transform: translateX(100%);
+            pointer-events: all;
+            transition: transform .2s ease-in-out;
+
+            ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            &:blur {
+                background-color: red;
+            }
+        }
+
+    }
+
+    header #humberger:checked + .nav-container {
+        backdrop-filter: blur(5px);
+        nav {
+            transform: translateX(0);
+        }
+    }
+}
+
+@media (max-width: 450px){
+
+    footer .footer-info {
+        flex-direction: column;
+        align-items: flex-start;
+        &>div:last-child {
+            align-self: center;
+        }
+    }
+    footer .footer-info .footer-links {
+        flex-direction: column;
     }
 }
