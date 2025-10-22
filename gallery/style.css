@@ -126,20 +126,16 @@ main{
         margin: 20px 0;
         height: 50vh;
         display: flex;
-        align-content: center;
         justify-self: center;
         width: 98%;
         overflow-x: scroll;
-        overflow-y: hidden;
-        gap: 1em;
-        .cards1 , .cards2{
+        .cards{
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 1em;
-            animation: spin 15s linear infinite;
+            animation: spin 15s infinite linear ;
             .card{
-                height: 350px;
+                padding: 10px;
                 display: flex;
                 .image-container{
                     text-align: center;
@@ -150,6 +146,7 @@ main{
                     img{
                         height: 350px;
                         width: 250px;
+                        object-fit: cover;
                     }
                     p{
                         width: 100%;
@@ -174,10 +171,7 @@ main{
         
     }
     .slider:hover{
-        .cards1{
-            animation-play-state: paused;
-        }
-        .cards2{
+        .cards{
             animation-play-state: paused;
         }
     }
@@ -186,12 +180,8 @@ main{
     }
 }
 @keyframes spin {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-90%);
-  }
+    from {translate: 0;}
+    to {translate: -100%;}
 }
 footer{
     overflow: hidden;
