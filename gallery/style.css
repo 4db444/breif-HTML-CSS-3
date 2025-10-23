@@ -44,6 +44,7 @@ main{
         justify-self: center;
         width: 98%;
         overflow-y: visible;
+        overflow-x: hidden;
 
         .cards{
             display: flex;
