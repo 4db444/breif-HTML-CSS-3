@@ -1,37 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Travigo</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Volkhov:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Volkhov:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./style.css">
 </head>
-<body>
-   <header>
-        <p class="logo">Travigo</p>
-            <ul>
-                <li><a href="./index.html">Home</a></li>
-                <li><a href="./blog/blog.html">Blog</a></li>
-                <li><a href="./destinations.html">Destination</a></li>
-                <li><a href="./galery/galery.html">Galery</a></li>
-                <li><a href="./about.html">About</a></li>
-                <li><a href="./contact.html">Contact</a></li>
-            </ul>
 
-            <ul>
-                <li><a href="./login.html">Login</a></li>
-                <li><a href="./signup.html">Sign up</a></li>
-                <li>En<i class="fa-solid fa-chevron-down"></i></li>
-            </ul>
+<body>
+    <header>
+        <p class="logo">Travigo</p>
+        <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./blog/blog.html">Blog</a></li>
+            <li><a href="./destinations.html">Destination</a></li>
+            <li><a href="./galery/galery.html">Galery</a></li>
+            <li><a href="./about.html">About</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+        </ul>
+
+        <ul>
+            <li><a href="./login.html">Login</a></li>
+            <li><a href="./signup.html">Sign up</a></li>
+            <li>En<i class="fa-solid fa-chevron-down"></i></li>
+        </ul>
     </header>
     <main class="contact">
         <h1 class="splashed">Contact</h1>
         <section>
-            <form action="">
+            <form>
                 <div class="name">
                     <div class="first-name">
                         <label for="">First name</label>
@@ -43,13 +49,67 @@
                     </div>
                 </div>
                 <label for="">Email</label>
-                <input type="email" name="" id="" placeholder="Email">
+                <input type="email" placeholder="Email">
                 <label for="">Message</label>
-                <textarea name="" id="" placeholder="I wanted to . . ."></textarea>
+                <textarea placeholder="I wanted to . . ."></textarea>
                 <button type="submit">Send</button>
             </form>
-            <img src="./img/contact/contact.png" alt="">
+
+            <!-- FAQ Section -->
+            <!-- <aside class="faq-section">
+                <h2>FAQ</h2>
+                <div class="faq">
+                    <h3>How can I book a trip?</h3>
+                    <p>You can book directly through our website by filling out the booking form.</p>
+                </div>
+                <div class="faq">
+                    <h3>Can I cancel my booking?</h3>
+                    <p>Yes, you can cancel up to 48 hours before departure without extra fees.</p>
+                </div>
+                <div class="faq">
+                    <h3>How do I contact support?</h3>
+                    <p>Simply fill out the contact form on this page or email us at support@travigo.com.</p>
+                </div>
+            </aside> -->
+            <aside class="faq-section">
+                <h2 class="splashed">FAQ</h2>
+                <p class="faq-subtitle">Most asked questions</p>
+
+                <div class="faq-item">
+                    <div class="faq-icon">?</div>
+                    <div class="faq-text">
+                        <h3>HOW DO I GET STARTED?</h3>
+                        <p>Click on the Sign Up button on the top of the website to start your journey with us.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-icon">?</div>
+                    <div class="faq-text">
+                        <h3>WHAT IS THE CANCELLATION POLICY?</h3>
+                        <p>You can cancel up to 24 hours before your trip for a full refund.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-icon">?</div>
+                    <div class="faq-text">
+                        <h3>HOW DO I CONTACT CUSTOMER SUPPORT?</h3>
+                        <p>You can reach us via email at support@travigo.com.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-icon">?</div>
+                    <div class="faq-text">
+                        <h3>ARE THERE ANY TRAVEL RESTRICTIONS?</h3>
+                        <p>Restrictions vary by destination. Check the latest travel advisories on the Blog page.</p>
+                    </div>
+                </div>
+            </aside>
+
         </section>
+
     </main>
     <footer>
         <div class="footer-info">
@@ -97,4 +157,5 @@
         <p>All rights reserved@genZdevs.co</p>
     </footer>
 </body>
+
 </html>
