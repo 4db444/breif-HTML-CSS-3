@@ -52,12 +52,12 @@
 
 }
 
-.pics-grid .pics-grid-1 .vector {
+.article .pics-grid-1 .vector {
     left: 0;
     top: 0;
 }
 
-.pics-grid .pics-grid-2 .vector {
+.article .pics-grid-2 .vector {
     top: 0;
     right: 0;
 }
@@ -100,7 +100,6 @@
     justify-content: center;
 
     height: 100px;
-    width: 50vw;
     border-radius: 40px;
 }
 
@@ -142,6 +141,7 @@
 
 .author-card .content {
     height: 100%;
+    width: 100%;
     display: flex;
     align-items: center;
     gap: 1em;
@@ -150,8 +150,11 @@
 
 .content .details {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    flex-grow: 1;
+    flex-wrap: wrap;
 }
 
 .content .details .name {
@@ -176,26 +179,23 @@
     .pics-grid-1 {
         display: flex;
         flex-direction: column;
-        text-align: center;
 
     }
     .pics-grid-2 {
         display: flex;
         flex-direction: column;
-        text-align: center;
 
     }
 
     .pics-grid-1 img {
         width: 90%;
-        margin: 10px auto;
+        /* margin: 10px auto; */
     }
 
     .mobile-only {
         display: block;
         margin: 10px auto;
         width: 100%;
-        text-align: justify;
 
     }
 
@@ -210,22 +210,5 @@
     .wrapper {
         width: 90vw;
         height: auto;
-    }
-
-    .wrapper .author-card {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        border-radius: 80px;
-        padding: 1em;
-        gap: 0.5em;
-    }
-
-    .author-card .img {
-        height: 80px;
-    }
-
-    .author-card .date {
-        margin-top: 0.5em;
     }
 }
