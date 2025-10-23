@@ -1,0 +1,130 @@
+.blog {
+  padding-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+}
+
+.blog section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin: initial;
+  position: relative;
+}
+
+.blog .history .vector {
+  left: 0;
+  top: 0;
+}
+
+.blog .our-mission .vector {
+  top: 0;
+  right: 0;
+}
+
+.blog section h2 {
+  margin-bottom: 15px;
+  margin-left: -2rem;
+  color: var(--red-color);
+  font-size: 32px;
+}
+
+.blog section p {
+  font-size: 20px;
+  color: var(--secondary-text);
+  max-width: 660px;
+  text-indent: 3rem;
+}
+
+@media (max-width: 1200px) {
+  section,
+  header,
+  footer {
+    padding: 7px 20px;
+  }
+}
+
+.hero {
+  margin-bottom: 10px;
+}
+.blog-title {
+  display: grid;
+  grid-template-columns: auto;
+  align-items: center;
+}
+.blog-description {
+  display: grid;
+  align-items: center;
+  width: 50vh;
+  height: auto;
+  position: relative;
+  left: 20px;
+  /* align-self: center; */
+}
+.blog-title h2 {
+  margin: 5vh;
+  color: #14183e;
+  font-weight: bold;
+  font-family: volkhov, sans-serif;
+  font-size: 300%;
+}
+
+.blog-description p {
+  align-items: center;
+  font-family: poppins, sans-serif;
+  font-weight: 200%;
+}
+.image-carte {
+  object-fit: cover;
+  object-position: top;
+  margin-bottom: 10px;
+}
+
+.carte-container {
+  display: flex;
+  justify-content: space-evenly;
+  display:grid;
+  grid-template-columns: 30% 30%;
+}
+.carte {
+  background-color: rgb(251, 251, 251);
+  border-radius: 20px;
+  border: solid;
+}
+.carte h3 {
+  display: flex;
+  width: 100%;
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--secondary-text);
+  justify-content: space-between;
+  align-self: self-end;
+}
+
+.carte p {
+  color: var(--secondary-text);
+
+  text-align: center;
+}
+
+.dest-prix {
+  display: inline-flex;
+  justify-content: space-evenly;
+  text-align: end;
+  width: 100%;
+  margin-bottom: 0.5em;
+}
+
+.dest-prix h3 {
+  justify-content: start;
+  margin-left: 1em;
+}
+
+.dest-prix #duration {
+  text-align: end;
+  margin-right: 10px ;
+  
+}
