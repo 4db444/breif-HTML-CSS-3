@@ -7,46 +7,36 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Volkhov:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Volkhov:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./../style.css">    
     <title>Tavigo | Gallery</title>
 </head>
 <body>
-    <input type="checkbox" id="menu" >
     <header>
-        <div class="LOGO">
-        <a href="index.html">Travigo</a>
-        </div>
-        <div class="navelements">
-            <nav class="leftnav">
-                <a href="index.html">Home</a>
-                <a href="index.html">Blog</a>
-                <a href="destination.html">Destinstion</a>
-                <a href="gallery.html">Gallery</a>
-                <a href="index.html">Home</a>
-                <a href="aboutus.html">About Us</a>
-                <a href="contactus.html">Contact Us</a>
+        <p class="logo">Travigo</p>
+        <label for="humberger" class="humberger-menu">
+            <i class="fa-solid fa-bars"></i>
+        </label>
+        <input type="checkbox" name="" id="humberger">
+        <div class="nav-container">
+            <nav>
+                <!-- <i class="fa-solid fa-xmark" id="close"></i> -->
+                <ul>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./destinations.html">Destination</a></li>
+                    <li><a href="">Blog</a></li>
+                    <li><a href="">Gallery</a></li>
+                    <li><a href="./about.html">About</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
+                </ul>
+    
+                <ul>
+                    <li><a href="">Login</a></li>
+                    <li><a href="">Sign up</a></li>
+                    <li>En<i class="fa-solid fa-chevron-down"></i></li>
+                </ul>
             </nav>
-            <nav class="siglog">
-                <a href="login.html">Login</a>
-                <a href="signup.html"><button >Sign up</button></a>
-            </nav>
         </div>
-        <label for="menu">☰</label>
     </header>
-    <div class="sidebar">
-        <label for="menu">✖</label>
-        <nav class="leftnav">
-            <a href="index.html">Home</a>
-            <a href="index.html">Blog</a>
-            <a href="destination.html">Destinstion</a>
-            <a href="gallery.html">Gallery</a>
-            <a href="index.html">Home</a>
-            <a href="aboutus.html">About Us</a>
-            <a href="contactus.html">Contact Us</a>
-            <a href="login.html">Login</a>
-            <a href="signup.html">Sign up</a>
-        </nav>
-    </div>
     <main>
         <section class="titlegallery">
             <h1>
@@ -336,55 +326,52 @@
             
         </div>
     </main>
-    <footer>
-            <div class="titles">
-                <h1>Travigo.</h1>
+<footer>
+        <div class="footer-info">
+            <div>
+                <h4>Travigo.</h4>
                 <p>Book your trip in minute, get full Control for much longer.</p>
             </div>
-            <div class="cards">
-                <div class="card">
-                    <h2>company</h2>
-                    <a href="#">About</a>
-                    <a href="#">Team</a>
-                    <a href="#">Mobile</a>
+            <div class="footer-links">
+                <div>
+                    <h4>Company</h4>
+                    <ul>
+                        <li>About</li>
+                        <li>Team</li>
+                        <li>Mobile</li>
+                    </ul>
                 </div>
-                <div class="card">
-                    <h2>Contact</h2>
-                    <a href="#">Help/FAQ </a>
-                    <a href="#">Contact</a>
-                    <a href="#">Address</a>
+                <div>
+                    <h4>Contact</h4>
+                    <ul>
+                        <li>Help/FAQ</li>
+                        <li>Contact</li>
+                        <li>Address</li>
+                    </ul>
                 </div>
-                <div class="card">
-                    <h2>More</h2>
-                    <a href="#">Flights</a>
-                    <a href="#">Hotels</a>
-                    <a href="#">Bokking</a>
-                </div>
-            </div>
-            <div class="social">
-                <div class="icons">
-                    <a href="#"><img src="img/facebook.png" width="40px" alt=""></a>
-                    <a href="#"><img src="img/instagram.png" width="40px" alt=""></a>
-                    <a href="#"><img src="img/twitter.png" width="40px" alt=""></a>
-                </div>
-                <p>Discover our app</p>
-                <div class="apps">
-                    <a class="playstore" href="#">
-                        <img src="img/google-play.png" width="30px" alt="">
-                        <div class="textplay">
-                            <h5>GET IT ON</h5>
-                            <P>GOOGLE PLAY</P>
-                        </div>
-                    </a>
-                    <a class="playstore" href="#">
-                        <img src="img/apple.png" width="25px" alt="">
-                        <div class="textplay">
-                            <h5>GET IT ON</h5>
-                            <P>APP STORE</P>
-                        </div>
-                    </a>
+                <div>
+                    <h4>More</h4>
+                    <ul>
+                        <li>Flights</li>
+                        <li>Hotels</li>
+                        <li>Booking</li>
+                    </ul>
                 </div>
             </div>
+            <div>
+                <div class="social">
+                    <i class="fa-brands fa-facebook-f"></i>
+                    <i class="fa-brands fa-instagram instagram"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                </div>
+                <h4>Discover out app</h4>
+                <div class="stores">
+                    <img src="./img/stores/Google Play.png" alt="">
+                    <img src="./img/stores/Play Store.png" alt="">
+                </div>
+            </div>
+        </div>
+        <p>All rights reserved@genZdevs.co</p>
     </footer>
 </body>
 </html>

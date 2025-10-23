@@ -8,7 +8,7 @@
 :root{
     --bleu:#14183E;
 }
-#menu{
+/* #menu{
     display: none;
 }
 header{
@@ -90,7 +90,7 @@ header{
 }
 #menu:checked ~ .sidebar {
   right: 0;
-}
+} */
 main{
     .titlegallery{
         margin-top: 20px;
@@ -155,7 +155,6 @@ main{
                         background-color: rgba(0, 0, 0, 0.611);
                         color: white;
                         font-size: 12px;
-                        border-radius: 0 0 25px 25px  ;
                         position: absolute;
                         bottom: -80px;
                         transition: 0.5s;
@@ -183,7 +182,7 @@ main{
     from {translate: 0;}
     to {translate: -100%;}
 }
-footer{
+/* footer{
     overflow: hidden;
     display: flex;
     justify-self: center;
@@ -288,10 +287,10 @@ footer{
             }
         }
     }
-}
+} */
 
 @media (max-width: 1300px){
-    header{
+    /* header{
         .navelements{
             width: 80%;
             .leftnav{
@@ -301,10 +300,10 @@ footer{
         a{
             font-size: 15px;
         }
-    }
+    } */
 }
 @media (max-width: 850px){
-    footer{
+    /* footer{
         flex-direction: column;
         align-items: center;
         .titles{
@@ -321,10 +320,10 @@ footer{
         .social{
             width: 100%;
         }
-    }
+    } */
 }
 @media (max-width: 750px) {
-    header {
+    /* header {
         padding: 0 30px;
         justify-content: space-between;
         .navelements {
@@ -342,5 +341,5 @@ footer{
                 font-size: 14px;
             }
         }
-    }
+    } */
 }
