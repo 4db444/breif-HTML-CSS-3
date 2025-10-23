@@ -28,6 +28,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 2rem;
     position: fixed;
     width: 100%;
     top: 0;
@@ -38,8 +39,32 @@ header {
 }
 
 header .logo {
+    flex-grow: 1;
     font-size: 40px;
     font-weight: bold;
+}
+
+header .humberger-menu {
+    display: none;
+    i{
+        transform: scale(1.5);
+    }
+}
+
+header .nav-container {
+    align-items: center;
+    flex-grow: 1;
+}
+
+header nav {
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+header input{
+    display: none;
 }
 
 header ul {
@@ -53,7 +78,22 @@ header a {
     text-decoration: none;
     color: var(--tab-clolor);
     font-weight: 500;
+    position: relative;
+    
+    &::after {
+        border-radius: 10px;
+        content: "";
+        width: 0;
+        height: 2px;
+        background-color: var(--primary-header);
+        bottom: 0;
+        position: absolute;
+        left: 0;
+    }
 
+    &:hover::after {
+        width: 100%;
+    }
 }
 
 main {
@@ -62,6 +102,7 @@ main {
 
 section, header, footer {
     padding: 7px 10%;
+    width: 100%;
 }
 
 section:not(.hero) {
@@ -76,22 +117,23 @@ section .vector {
     right: 0;
     top: 0;
     z-index: -999;
+    max-width: 90%;
 }
 
 .hero {
     display: flex;;
-    justify-content: space-between;
+    justify-content: center;
+    /* flex-wrap: wrap; */
     align-items: center;
     height: min(100vh, 900px);
 }
 
 .hero .hero-content {
     flex-grow: 0;
-    flex-shrink: 0;
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
-    width: 500px;
+    max-width: 500px;
 }
 
 .hero-content p:first-child{
@@ -107,7 +149,7 @@ section .vector {
 }
 
 .hero .home-img{
-    height: 600px;
+    width: 50%;
 }
 
 .splashed {
@@ -132,6 +174,8 @@ section .vector {
 
 .hero .hero-content .buttons {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 2rem;
 }
 
@@ -184,11 +228,15 @@ section .vector {
     align-items: center;
     flex-direction: column;
     gap: 1rem;
+    h2 {
+        text-align: center;
+    }
 }
 
 .plus{
     position: absolute;
     z-index: -9;
+    width: min(100px, 40%);
 }
 
 section > .plus {
@@ -213,7 +261,8 @@ section > h2, .easy-fast-description > h2, .header h2 {
     display: flex;
     padding: 20px 40px;
     width: 100%;
-    justify-content: space-between;
+    justify-content: center;
+    flex-wrap: wrap;
     align-items: center;
     gap: 2.5rem;
 }
@@ -273,14 +322,19 @@ section > h2, .easy-fast-description > h2, .header h2 {
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    gap: 1.5rem   ;
+    gap: 1.5rem;
+    h2{
+        text-align: center;
+    }
 }
 
 .top-destinations .cards{
     display: flex;
     width: 100%;
     justify-content: space-around;
+    gap: 1.5rem ;
     padding: 40px 10px;
+    flex-wrap: wrap;
 }
 
 .card{
@@ -288,8 +342,8 @@ section > h2, .easy-fast-description > h2, .header h2 {
     border: none;
     border-radius: 25px;
     flex-grow: 0;
-    flex-shrink: 0;
-    width: 300px;
+    flex-shrink: 1;
+    max-width: 300px;
     overflow: hidden;
     box-shadow: 0 0 30px rgb(211, 211, 211);
     background-color: var(--bg-color);
@@ -334,6 +388,7 @@ section > h2, .easy-fast-description > h2, .header h2 {
 .easy-fast {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     align-items: flex-end;
 }
 
@@ -341,7 +396,7 @@ section > h2, .easy-fast-description > h2, .header h2 {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    width: 500px;
+    max-width: 460px;
 }
 
 .easy-fast .easy-fast-description .steps{
@@ -358,7 +413,7 @@ section > h2, .easy-fast-description > h2, .header h2 {
 
 .easy-fast .easy-fast-description .steps .step .step-details {
     font-size: 16px;
-    width: 400px;
+    max-width: 400px;
     h3{
         color: var(--secondary-text);
         font-weight: bold;
@@ -472,8 +527,9 @@ section > h2, .easy-fast-description > h2, .header h2 {
 
 .logos {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
     img {
         filter: grayscale(1);
         padding: 30px;
@@ -491,12 +547,13 @@ section > h2, .easy-fast-description > h2, .header h2 {
     position: relative;
     background-color: #DFD7F9;
     padding: 80px 70px;
-    width: 1100px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     border-radius: 130px 20px 20px;
     align-items: center;
     gap: 3rem;
+    /* overflow: hidden; */
 
     h3{
         font-size: 33px;
@@ -508,6 +565,16 @@ section > h2, .easy-fast-description > h2, .header h2 {
         display: flex;
         gap: 1rem;
         position: relative;
+        flex-wrap: wrap;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+
+        .input-feild {
+            position: relative;
+
+        }
+
         label {
             top: 50%;
             transform: translateY(-50%);
@@ -523,7 +590,7 @@ section > h2, .easy-fast-description > h2, .header h2 {
 
         input {
             height: 70px;
-            width: 400px;
+            width: 100%;
             border: none;
             border-radius: 10px;
             padding: 15px 30px;
@@ -542,6 +609,7 @@ section > h2, .easy-fast-description > h2, .header h2 {
             color: var(--bg-color);
             border: none;
             width: 180px;
+            height: 70px;
             border-radius: 10px;
         }
     }
@@ -556,12 +624,13 @@ section > h2, .easy-fast-description > h2, .header h2 {
     bottom: 0;
     left: 0;
     bottom: 0;
-    height: 90%;
+    max-height: 100%;
+    max-width: 40%;
 }
 .subscribe-form .right-circle {
     right: 0;
     top: 0;
-    height: 90%;
+    width: min(90%, 300px);
 }
 
 .subscribe-form .telegram {
@@ -588,11 +657,30 @@ footer {
 
 footer .footer-info {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    flex-wrap: wrap;
     width: 100%;
 }
 
-footer .footer-info div {
+footer .footer-info>div:first-child {
+    h4{
+        font-size: 44px;
+        font-weight: 400;
+    }
+    p{
+        font-size: 14px;
+        color: var(--secondary-text);
+        width: 250px;
+    }
+}
+
+footer .footer-info .footer-links {
+    display: flex;
+    gap: 3rem;
+    flex-wrap: wrap;
+    justify-content: center;
     h4{
         font-size: 21px;
         font-weight: bold;
@@ -615,7 +703,7 @@ footer .footer-info div {
     }
 }
 
-footer .footer-info div:last-child {
+footer .footer-info>div:last-child {
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -651,17 +739,7 @@ footer .footer-info .social {
     }
 }
 
-footer .footer-info div:first-child {
-    h4{
-        font-size: 44px;
-        font-weight: 400;
-    }
-    p{
-        font-size: 14px;
-        color: var(--secondary-text);
-        width: 250px;
-    }
-}
+
 
 footer > p {
     color: var(--secondary-text);
@@ -891,4 +969,105 @@ footer > p {
     section, header, footer {
         padding: 7px 20px;
     }
+}
+
+@media (max-width: 1000px){
+
+    header .humberger-menu, header nav #close {
+        display: block;
+    }
+
+    header .nav-container {
+        position: fixed;
+        height: calc(100vh - 75px);
+        bottom: 0;
+        left: 0;
+        width: 100vw;
+        display: flex;
+        justify-content: flex-end;
+        pointer-events: none;
+        
+        nav {
+            height: 100%;
+            transition: unset;
+            width: 300px;
+            background-color: var(--bg-color);
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            flex-grow: 0;
+            transform: translateX(100%);
+            pointer-events: all;
+            transition: transform .2s ease-in-out;
+
+            ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            &:blur {
+                background-color: red;
+            }
+        }
+
+    }
+
+    header #humberger:checked + .nav-container {
+        backdrop-filter: blur(5px);
+        nav {
+            transform: translateX(0);
+        }
+    }
+
+    
+    .home-img {
+        display: none;
+    }
+    .easy-fast {
+        justify-content: center;
+    }
+
+    .easy-fast .images {
+        display: none;
+    }
+
+    .what-people-say {
+        flex-direction: column;
+        gap: 5rem;
+        align-items: center;
+        .title {
+            width: auto;
+        }
+        .opinion {
+            gap: 1rem;
+            justify-content: space-between;
+
+            .opinion-container{
+                width: fit-content;
+            }
+        }
+    }
+
+    
+    .subscribe-form form h3 {
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 450px){
+    .hero .hero-content h1, .hero .hero-content h1 span{
+        font-size: 40px;
+    }
+    footer .footer-info {
+        flex-direction: column;
+        align-items: flex-start;
+        &>div:last-child {
+            align-self: center;
+        }
+    }
+    footer .footer-info .footer-links {
+        flex-direction: column;
+    }
+
+
 }
