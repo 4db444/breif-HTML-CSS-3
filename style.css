@@ -361,7 +361,7 @@ section>h2,
     border-radius: 25px;
     flex-grow: 0;
     flex-shrink: 0;
-    max-width: 300px;
+    width: 300px;
     overflow: hidden;
     box-shadow: 0 0 30px rgb(211, 211, 211);
     background-color: var(--bg-color);
@@ -821,6 +821,9 @@ footer>p {
     display: flex;
     gap: 2.5rem;
     padding: 50px;
+    a{
+        text-decoration: none;
+    }
 }
 
 .uk .vector {
