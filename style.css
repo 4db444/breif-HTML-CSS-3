@@ -127,12 +127,11 @@ section .vector {
 }
 
 .hero {
-    display: flex;
-    ;
+    display: flex;;
     justify-content: center;
-    /* flex-wrap: wrap; */
     align-items: center;
     height: min(100vh, 900px);
+    overflow: hidden;
 }
 
 .hero .hero-content {
@@ -570,6 +569,7 @@ section>h2,
 
 .subscribe-form {
     padding-block: 50px;
+    padding-inline: 50px;
     overflow: hidden;
 }
 
