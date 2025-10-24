@@ -1,0 +1,105 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: poppins , sans-serif;
+    text-decoration: none;
+    color: #000000;
+}
+:root{
+    --bleu:#14183E;
+}
+main{
+    .titlegallery{
+        margin-top: 20px;
+        justify-self: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h1{
+            font-family: volkhov;
+            font-size: 45px;
+            color: var(--bleu);
+        }
+        p{
+            width: min(100%, 800px);
+            text-align: center;
+            font-size: 17px;
+            font-weight: 500;   
+        }
+    }
+    .titleslider{
+        display: flex;
+        width: 98%;
+        justify-self: center;
+        h3{
+            font-size: 30px;
+            font-weight: 400;
+            opacity: 70%;
+            color: var(--bleu);
+        }
+    }
+    .slider{
+        margin: 20px 0;
+        display: flex;
+        justify-self: center;
+        width: 98%;
+        overflow-y: visible;
+        overflow-x: hidden;
+
+        .cards{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            animation: spin 15s infinite linear ;
+            padding: 0 8px;
+            overflow-y: visible;
+            .card{
+                display: flex;
+                .image-container{
+                    text-align: center;
+                    border-radius: 25px;
+                    position: relative;
+                    display: flex;
+                    overflow: hidden;
+                    height: 350px;
+                    width: 250px;
+                    height: 100%;
+                    img{
+                        object-fit: cover;
+                        width: 100%;
+                    }
+                    p{
+                        width: 100%;
+                        text-align: center;
+                        padding: 20px 0;
+                        background-color: rgba(0, 0, 0, 0.611);
+                        color: white;
+                        font-size: 12px;
+                        position: absolute;
+                        bottom: -80px;
+                        transition: 0.5s;
+                    }
+                }
+                .image-container:hover{
+                    p{
+                        bottom: 0;
+                    }
+                }
+            }
+        }
+        
+    }
+    .slider:hover{
+        .cards{
+            animation-play-state: paused;
+        }
+    }
+    .slider::-webkit-scrollbar{
+        display: none;
+    }
+}
+@keyframes spin {
+    from {translate: 0;}
+    to {translate: -100%;}
+}
