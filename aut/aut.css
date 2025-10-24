@@ -118,7 +118,7 @@
 .titre-Login{
     position: relative;
 }
-.titre-Login::after{
+/* .titre-Login::after{
     z-index: -1;
     height: 30px;
     width: 200px;
@@ -130,7 +130,7 @@
     background-size:auto;
     position: absolute;
 
-}
+} */
 *{
 
     padding: 0;
