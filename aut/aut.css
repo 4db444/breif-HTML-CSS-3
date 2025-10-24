@@ -1,0 +1,71 @@
+.section-Login, .section-signUp {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: min(800px, 100vh);
+    gap: 2rem;
+
+    h1 {
+        font-family: volkhov;
+        color: var(--primary-header);
+        font-size: 50px;
+    }
+}
+
+.Login-container, .signUp-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+
+    form {
+        display: flex;
+        flex-direction: column;
+        width: min(500px, 100%);
+        gap: 2rem;
+
+        .fullname{
+            display: flex;
+            gap: 1rem;
+        }
+
+        div {
+            width: 100%;
+            label {
+                display: block;
+                margin-left: 10px;
+                color: var(--primary-header);
+            }
+            input {
+                width: 100%;
+                padding: 15px 10px;
+                border: 1px solid var(--primary-header);
+                border-radius: 15px;
+            }
+        }
+
+        button{
+            align-self: center;
+            background-color: var(--yellow);
+            color: white;
+            padding: 15px 35px;  
+            border: none;
+            border-radius: 10px;
+            &:hover {
+                box-shadow: 0 0 15px var(--yellow);
+            }
+        }
+
+    }
+
+    img {
+        width: 40%;
+    }
+}
+
+@media (max-width: 800px){
+    .Login-container img, .signUp-container img {
+        display: none;
+    }
+}

@@ -1,35 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Travigo</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Volkhov:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Volkhov:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
     <header>
         <p class="logo">Travigo</p>
-            <ul>
-                <li><a href="./index.html">Home</a></li>
-                <li><a href="./destinations.html">Destination</a></li>
-                <li><a href="./about.html">About</a></li>
-                <li><a href="./contact.html">Contact</a></li>
-            </ul>
-
-            <ul>
-                <li><a href="">Login</a></li>
-                <li><a href="">Sign up</a></li>
-                <li>En<i class="fa-solid fa-chevron-down"></i></li>
-            </ul>
+        <label for="humberger" class="humberger-menu">
+            <i class="fa-solid fa-bars"></i>
+        </label>
+        <input type="checkbox" name="" id="humberger">
+        <div class="nav-container">
+            <nav>
+                <ul>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./destinations.html">Destination</a></li>
+                    <li><a href="">Blog</a></li>
+                    <li><a href="">Gallery</a></li>
+                    <li><a href="./about.html">About</a></li>
+                    <li><a href="./contact/contact.html">Contact</a></li>
+                </ul>
+    
+                <ul>
+                    <li><a href="">Login</a></li>
+                    <li><a href="">Sign up</a></li>
+                    <li>En<i class="fa-solid fa-chevron-down"></i></li>
+                </ul>
+            </nav>
+        </div>
     </header>
     <main class="contact">
         <h1 class="splashed">Contact</h1>
         <section>
-            <form action="">
+            <form>
                 <div class="name">
                     <div class="first-name">
                         <label for="">First name</label>
@@ -41,13 +57,51 @@
                     </div>
                 </div>
                 <label for="">Email</label>
-                <input type="email" name="" id="" placeholder="Email">
+                <input type="email" placeholder="Email">
                 <label for="">Message</label>
-                <textarea name="" id="" placeholder="I wanted to . . ."></textarea>
+                <textarea placeholder="I wanted to . . ."></textarea>
                 <button type="submit">Send</button>
             </form>
-            <img src="./img/contact/contact.png" alt="">
+
+            <aside class="faq-section">
+                <h2 class="splashed faq-title">FAQ</h2>
+                <p class="faq-subtitle">Most asked questions</p>
+
+                <div class="faq-item">
+                    <div class="faq-icon">?</div>
+                    <div class="faq-text">
+                        <h3>HOW DO I GET STARTED?</h3>
+                        <p>Click on the Sign Up button on the top of the website to start your journey with us.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-icon">?</div>
+                    <div class="faq-text">
+                        <h3>WHAT IS THE CANCELLATION POLICY?</h3>
+                        <p>You can cancel up to 24 hours before your trip for a full refund.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-icon">?</div>
+                    <div class="faq-text">
+                        <h3>HOW DO I CONTACT CUSTOMER SUPPORT?</h3>
+                        <p>You can reach us via email at support@travigo.com.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-icon">?</div>
+                    <div class="faq-text">
+                        <h3>ARE THERE ANY TRAVEL RESTRICTIONS?</h3>
+                        <p>Restrictions vary by destination. Check the latest travel advisories on the Blog page.</p>
+                    </div>
+                </div>
+            </aside>
+
         </section>
+
     </main>
     <footer>
         <div class="footer-info">
@@ -55,29 +109,31 @@
                 <h4>Travigo.</h4>
                 <p>Book your trip in minute, get full Control for much longer.</p>
             </div>
-            <div>
-                <h4>Company</h4>
-                <ul>
-                    <li>About</li>
-                    <li>Team</li>
-                    <li>Mobile</li>
-                </ul>
-            </div>
-            <div>
-                <h4>Contact</h4>
-                <ul>
-                    <li>Help/FAQ</li>
-                    <li>Contact</li>
-                    <li>Address</li>
-                </ul>
-            </div>
-            <div>
-                <h4>More</h4>
-                <ul>
-                    <li>Flights</li>
-                    <li>Hotels</li>
-                    <li>Booking</li>
-                </ul>
+            <div class="footer-links">
+                <div>
+                    <h4>Company</h4>
+                    <ul>
+                        <li>About</li>
+                        <li>Team</li>
+                        <li>Mobile</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Contact</h4>
+                    <ul>
+                        <li>Help/FAQ</li>
+                        <li>Contact</li>
+                        <li>Address</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>More</h4>
+                    <ul>
+                        <li>Flights</li>
+                        <li>Hotels</li>
+                        <li>Booking</li>
+                    </ul>
+                </div>
             </div>
             <div>
                 <div class="social">
@@ -95,4 +151,5 @@
         <p>All rights reserved@genZdevs.co</p>
     </footer>
 </body>
+
 </html>
