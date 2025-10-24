@@ -23,21 +23,30 @@
 
     <header>
         <p class="logo">Travigo</p>
-        <ul>
-            <li><a href="./index.html">Home</a></li>
-            <li><a href="./blog.html">Blog</a></li>
-            <li><a href="./destinations.html">Destination</a></li>
-            <li><a href="./galery.html">Galery</a></li>
-            <li><a href="../about.html">About</a></li>
-            <li><a href="./contact.html">Contact</a></li>
-        </ul>
-
-        <ul>
-            <li><a href="./login.html">Login</a></li>
-            <li><a href="./signup.html">Sign up</a></li>
-            <li>En<i class="fa-solid fa-chevron-down"></i></li>
-        </ul>
+        <label for="humberger" class="humberger-menu">
+            <i class="fa-solid fa-bars"></i>
+        </label>
+        <input type="checkbox" name="" id="humberger">
+        <div class="nav-container">
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../destinations.html">Destination</a></li>
+                    <li><a href="./blog.html">Blog</a></li>
+                    <li><a href="./../gallery/gallery.html">Gallery</a></li>
+                    <li><a href="../about.html">About</a></li>
+                    <li><a href="../contact.html">Contact</a></li>
+                </ul>
+    
+                <ul>
+                    <li><a href="./../aut/login.html">Login</a></li>
+                    <li><a href="./../aut/signup.html">Sign up</a></li>
+                    <li>En<i class="fa-solid fa-chevron-down"></i></li>
+                </ul>
+            </nav>
+        </div>
     </header>
+
     <!-- hero blassa -->
     <main>
 
@@ -186,7 +195,7 @@
                             <div class="un-article">
 
                                 <img src="/blog/pictures/camp.png">
-                                <p>Why slow travel is luxury</p>
+                                <a href="./../article/article.html">Why slow travel is luxury</a>
 
                             </div>
 
@@ -194,7 +203,7 @@
                             <div class="un-article">
 
                                 <img src="/blog/pictures/freind.png">
-                                <p> Eco-Friendly Travel</p>
+                                <a href="./../article/article.html"> Eco-Friendly Travel</a>
 
                             </div>
 
@@ -202,66 +211,44 @@
                             <div class="un-article">
 
                                 <img src="/blog/pictures/maltas.png">
-                                <p>travel on budget</p>
-
+                                <a href="./../article/article.html">travel on budget</a>
                             </div>
-
-
-
-
-
                         </div>
                     </div>
                 </div>
-
-
-
-
-
-
-
-
-
         </section>
-
-
-
-
-
     </main>
-
-
-
-
     <footer>
         <div class="footer-info">
             <div>
                 <h4>Travigo.</h4>
                 <p>Book your trip in minute, get full Control for much longer.</p>
             </div>
-            <div>
-                <h4>Company</h4>
-                <ul>
-                    <li>About</li>
-                    <li>Team</li>
-                    <li>Mobile</li>
-                </ul>
-            </div>
-            <div>
-                <h4>Contact</h4>
-                <ul>
-                    <li>Help/FAQ</li>
-                    <li>Contact</li>
-                    <li>Address</li>
-                </ul>
-            </div>
-            <div>
-                <h4>More</h4>
-                <ul>
-                    <li>Flights</li>
-                    <li>Hotels</li>
-                    <li>Booking</li>
-                </ul>
+            <div class="footer-links">
+                <div>
+                    <h4>Company</h4>
+                    <ul>
+                        <li>About</li>
+                        <li>Team</li>
+                        <li>Mobile</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Contact</h4>
+                    <ul>
+                        <li>Help/FAQ</li>
+                        <li>Contact</li>
+                        <li>Address</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>More</h4>
+                    <ul>
+                        <li>Flights</li>
+                        <li>Hotels</li>
+                        <li>Booking</li>
+                    </ul>
+                </div>
             </div>
             <div>
                 <div class="social">
@@ -278,11 +265,6 @@
         </div>
         <p>All rights reserved@genZdevs.co</p>
     </footer>
-
-
-
-
-
 </body>
 
 </html>
