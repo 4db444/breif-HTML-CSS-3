@@ -62,9 +62,9 @@ main{
                     position: relative;
                     display: flex;
                     overflow: hidden;
-                    height: 350px;
-                    width: 250px;
+                    width: 200%;
                     height: 100%;
+
                     img{
                         object-fit: cover;
                         width: 100%;
