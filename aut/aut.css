@@ -1,8 +1,9 @@
-.section-Login {
+.section-Login, .section-signUp {
     display: flex;
     flex-direction: column;
     align-items: center;
     height: min(800px, 100vh);
+    gap: 2rem;
 
     h1 {
         font-family: volkhov;
@@ -11,7 +12,7 @@
     }
 }
 
-.Login-container {
+.Login-container, .signUp-container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -24,9 +25,13 @@
         width: min(500px, 100%);
         gap: 2rem;
 
+        .fullname{
+            display: flex;
+            gap: 1rem;
+        }
+
         div {
             width: 100%;
-
             label {
                 display: block;
                 margin-left: 10px;
@@ -53,10 +58,14 @@
         }
 
     }
+
+    img {
+        width: 40%;
+    }
 }
 
 @media (max-width: 800px){
-    .Login-container img {
+    .Login-container img, .signUp-container img {
         display: none;
     }
 }
