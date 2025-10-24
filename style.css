@@ -173,6 +173,7 @@ section .vector {
     left: -20px;
     background-image: url("./img/vectors/splash.png");
     background-size: contain;
+    background-repeat: no-repeat;
     z-index: -11;
 }
 
